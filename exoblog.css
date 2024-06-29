@@ -1,0 +1,229 @@
+* {
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px 0px 0px 0px;
+    overflow-x: hidden;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.title h1{
+    font-weight: 300;
+    font-size: 36px;
+}
+.title h2 {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+}
+.title span {
+background-color: black;
+color: white;
+padding: 4px 8px;
+}
+.big {
+    width: 901.317px;
+    height: 552.467px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 40px;
+    margin-left: 70px;
+}
+.big img {
+    width: 901.317px;
+    height: 283.267px;
+    object-fit: fill;
+}
+.big h1{
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.big h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(37, 37, 37);
+    margin-left: 20px;
+}
+.big h3 {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 200;
+    margin-left: 20px;
+}
+.big span {
+    color: rgb(157, 157, 157);
+}
+.big input {
+    background-color: white;
+    border: solid gray 1px;
+    padding: 15px 10px;
+    font-weight: 650;
+    margin-left: 18px;
+    margin-top: 25px;
+}
+.big input:hover {
+    background-color: rgb(187, 187, 187);
+    cursor:pointer
+}
+.big h4 {
+    font-weight: 700;
+    font-size: 15px;
+    position:relative;
+    bottom: 52px;
+    left: 750px;
+}
+.big h4 span {
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    margin-left: 4px;
+}
+.small {
+    width: 434.65px;
+    height: 431.95px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 40px;
+    margin-left: 70px;
+}
+.small img {
+    object-fit: fill;
+    width: 434.65px;
+    height: 271.65px;
+}
+.small h1{
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.small h3 {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 200;
+    margin-left: 20px;
+}
+.other {
+    position:absolute;
+    top: 140px;
+    right: 70px;
+}
+.small2 {
+    width:434.65px;
+    height:394.4px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 40px;
+    margin-left: 70px;
+}
+.postitle {
+    width: 434.65px;
+    height: 66px;
+    
+    background-color: rgb(233, 233, 233);
+}
+.postitle h1 {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 100;
+    color: rgb(37, 37, 37);
+}
+.post {
+    width:434.65px;
+    height:calc((394.4px - 66px) / 4);
+    padding:16px 16px;
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+.post:hover{
+    background-color: rgb(203, 203, 203);
+}
+.post img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.post h1 {
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+    bottom: 60px;
+    left: 70px;
+
+}
+.post h2 {
+    font-size: 15px;
+    font-weight: 100;
+    position: relative;
+    bottom: 70px;
+    left: 70px;
+}
+.small3{
+    width:434.65px;
+    height:210.5px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 40px;
+    margin-left: 70px;
+}
+.postitle1{
+    width: 434.65px;
+    height: 66px;
+    
+    background-color: rgb(233, 233, 233);
+}
+.postitle1 h1{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 100;
+    color: rgb(37, 37, 37);
+}
+.tags span{
+    background-color: rgb(237, 237, 237);
+    padding: 3px 4px;
+    margin: 0px 4px;
+    line-height: 40px;
+}
+#travel {
+    font-size: 18px;
+    background-color: black;
+    color: white;
+}
+.gray {
+    width: 100%;
+    background-color: gray;
+    height: 180px;
+    margin-top: 60px;
+}
+.buttons input {
+    margin-top: 40px;
+    margin-left: 30px;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100px;
+    border: none;
+}
+#previous {
+    filter: opacity(50%);
+    cursor: not-allowed;
+}
+#next {
+    margin-left: 7.5px;
+}
+.buttons input:hover {
+    background-color: rgb(189, 189, 189);
+    color: white;
+    cursor: pointer;
+}
+.gray h4{
+    margin-left: 30px;
+    color:rgb(255, 255, 255);
+    font-weight: 100;
+    margin-top: 40px;
+}
+.gray a {
+    color: white;
+}

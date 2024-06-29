@@ -1,0 +1,289 @@
+* {
+    font-family: "Times New Roman", Georgia, Serif;
+}
+.navbar {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    height: 50px;
+    width: 1519.2px;
+    font-size: 15px;
+    top: 0px;
+    position: fixed;
+    gap: 30px;
+    color: rgb(0, 0, 0);
+    z-index: 10;
+    
+    box-shadow: 1px 1px 1px 1px rgb(95, 95, 95);
+    text-decoration: none;
+    letter-spacing: 4px;
+    
+}
+.right {
+    position: relative;
+    top: 9px;
+    left: 1000px;
+}
+.navbar a {
+    color:black;
+    text-decoration: none;
+}
+.navbar a:visited{
+    text-decoration: none;
+    color: black
+}
+#left {
+    position: relative;
+    right:-20px;
+    top: 9px;
+}
+.font {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-weight: 100;
+}
+.pic h1 {
+    position: relative;
+    color: rgb(100, 100, 100);
+    top: -120px;
+    left: 20px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: 50;
+}
+.aboutext{
+    display: flex;
+    flex-direction: column;
+    width: 535.5px;
+    position: relative;
+    left: 800px;
+    bottom: 850px;
+    text-align: left;
+}
+.about img {
+    transform: scale(80%);
+    position:relative;
+    bottom: 150px;
+    left: 200px;
+}
+.aboutext h1 {
+    font-size: 45px;
+    font-weight: 100;
+    letter-spacing: 4px;
+    
+}
+#font1 {
+    position: relative;
+left: 90px;
+}
+#font2 {
+    position: relative;
+    left: 150px;
+    font-size: 18px;
+    letter-spacing: 4px;
+    
+}
+#font4 {
+    color: gray;
+    line-height: 25px;
+    font-size: 20px;
+}
+.aboutext span {
+    background-color: rgba(243, 243, 243, 0.781);
+}
+#font3 {
+    font-size: 20px;
+    line-height: 25px;
+}
+.separator {
+    margin: 0 auto;
+    border: solid rgb(201, 201, 201) 0.5px;
+    width: 40%;
+    position:relative;
+    bottom: 700px;
+}
+.menu img {
+    transform: scale(100%);
+    position: relative;
+    bottom: 600px;
+    left: 800px;
+}
+.damenu {
+    position: relative;
+    bottom: 1300px;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.damenu h1,h2,h3 {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-weight: 100;
+}
+#font5 {
+    position: relative;
+    left: 140px;
+    font-size: 40px;
+    letter-spacing: 8px;
+}
+.damenu h2 {
+    letter-spacing: 3px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.damenu h3{
+    color: gray;
+    font-size: 15px;
+}
+.contactext {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    left: 200px;
+    bottom: 1000px;
+    width: 70%;
+}
+.separator1 {
+    margin: 0 auto;
+    border: solid rgb(201, 201, 201) 0.5px;
+    width: 40%;
+    position:relative;
+    bottom: -30px;
+}
+.contactext h1 {
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 8px;
+
+}
+.contactext h2 {
+    font-size: 15px;
+}
+.contactext h3 {
+    color: rgb(46, 96, 79);
+    font-weight: bold;
+}
+.contactext h4 {
+    font-size: 15px;
+    font-weight: 100;
+}
+.contactext input {
+    border-bottom: gray 1px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 50px;
+    font-size: 20px;
+}
+#soobmit {
+    width: 140px;
+    height: 50px;
+    font-size: 15px;
+    margin-top: 20px;
+    border: none;
+}
+.link h4 {
+    font-weight: 100;
+    position: relative;
+    left: 700px;
+    top: 75px;
+    color: black;
+}
+.link a:visited{
+    color: black;
+}
+.link {
+    background-color: rgb(220, 220, 220);
+    height: 150px;
+    width: 100%;
+    position: relative;
+    bottom: -600px;
+}
+
+
+.contact1{
+    height: 200px;
+    position: relative;
+    top: 1100px;
+}
+.menu{
+    height: 200px;
+}
+html {
+    height: 3500px;
+    overflow-x: hidden;
+}
+.separator1 {
+    height: 1px;
+    padding: 0px;
+}
+.separator {
+    height: 1px;
+    padding: 0px;
+}
+@media screen and (max-width: 500px) {
+    .right{
+        display: none;
+    }
+    .pic img {
+        width: 100%;
+    }
+    .pic h1{
+        top: -90px;
+    }
+    .about img{
+        display: none;
+    }
+    .aboutext {
+        left: 0px;
+        bottom: 40px;
+        width: 90%;
+    }
+    #font3,#font4{
+        position: relative;
+        left: 25px;
+    }
+    .separator {
+        bottom: 0px;
+    }
+    .link {
+        bottom: -2000px;
+    }
+    .damenu {
+        bottom: 750px;
+        left: 50px;
+    }
+    #font5 {
+        left: 80px;
+    }
+    .contact1{
+        top: 2000px;
+        right: 170px;
+    }
+    .contactext{
+        width: 90%;
+    }
+    .menu img {
+        left: 0px;
+        scale: 70%;
+        bottom: -550px;
+    }
+    body,html {
+        height: 1200px;
+        overflow-x: hidden;
+        
+    }
+    .link{
+        bottom:-1500px;
+    }
+    .link h4 {
+        left: 180px;
+    }
+    .separator1{
+        bottom: -1020px;
+    }
+}
+body {
+    margin: 0px 0px 0px 0px;
+}

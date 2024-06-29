@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="playerimage">
+    <img id="playerpose" src="rock.png"></img>
+</div>
+
+<div id="enemyimage">
+    <img id="enemypose" src="rock.png"></img>
+</div>
+
+<button id="play" onclick="playgame()">play</button>
+<h1 id="gametext">Play Game</h1>
+<div class="score">
+<h2 id="wins">You : 0</h2>
+<h2 id="losses">Computer : 0</h2>
+</div>
+
+
+<div class="select">
+    <button id="rock" onclick="selectedrock()">Rock</button>
+    <button id="rock" onclick="selectedpaper()">Paper</button>
+    <button id="rock" onclick="selectedscissors()">Scissors</button>
+</div>
+</body>
+
+<script>
+    const playerDiv = document.getElementById("playerimage")
+    const enemyDiv = document.getElementById("enemyimage")
+    const playerpose = document.getElementById("playerpose")
+    const enemypose = document.getElementById("enemypose")
+    const gametext = document.getElementById("gametext")
+    let winText = document.getElementById("wins")
+    let loseText = document.getElementById("losses")
+    let winNum = 0
+    let loseNum = 0
+    let randomPlayer = 0
+    let randomEnemy = 0
+    let selectrock = 0
+    let selectpaper = 0
+    let selectscissors = 0
+    function selectedrock() {
+        if (selectrock==0) {
+            selectrock=1
+            selectpaper=0
+            selectscissors=0
+        } else {
+            selectrock=0
+        }
+    }
+    function selectedpaper() {
+        if (selectpaper==0) {
+            selectpaper=1
+            selectrock=0
+            selectscissors=0
+        } else {
+            selectpaper=0
+        }   
+    }
+    function selectedscissors() {
+        if (selectscissors==0) {
+            selectscissors=1
+            selectpaper=0
+            selectrock=0
+        } else {
+            selectscissors=0
+        }    
+    }
+    function playgame() {
+
+        let minCeiled = Math.ceil(1)
+        let maxFloored = Math.floor(3)
+        randomPlayer =  Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled)
+        randomEnemy =  Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled)
+        if (selectrock==1) {
+            randomPlayer=1
+        }
+        if (selectpaper==1) {
+            randomPlayer=2
+        }
+        if (selectscissors==1) {
+            randomPlayer=3
+        }
+        if (randomPlayer==1) {
+            playerpose.setAttribute("src","rock.png")
+        }
+        if (randomPlayer==2) {
+            playerpose.setAttribute("src","paper.png")
+        }
+        if (randomPlayer==3) {
+            playerpose.setAttribute("src","scissors.png")
+        }
+        if (randomEnemy==1) {
+            enemypose.setAttribute("src","rock.png")
+        }
+        if (randomEnemy==2) {
+            enemypose.setAttribute("src","paper.png")
+        }
+        if (randomEnemy==3) {
+            enemypose.setAttribute("src","scissors.png")
+        }
+
+        if (randomPlayer==randomEnemy) {
+            gametext.innerText = "Draw"
+        }
+        if (randomPlayer==1 && randomEnemy==2) {
+            gametext.innerText = "You lose..."
+            loseNum += 1
+        }
+        if (randomPlayer==1 && randomEnemy==3) {
+            gametext.innerText = "You win !"
+            winNum += 1
+        }
+        if (randomPlayer==2 && randomEnemy==1) {
+            gametext.innerText = "You win !"
+            winNum += 1
+        }
+        if (randomPlayer==2 && randomEnemy==3) {
+            gametext.innerText = "You lose..."
+            loseNum += 1
+        }
+        if (randomPlayer==3 && randomEnemy==1) {
+            gametext.innerText = "You lose..."
+            loseNum += 1
+        }
+        if (randomPlayer==3 && randomEnemy==2) {
+            gametext.innerText = "You win !"
+            winNum += 1
+        }
+        winText.innerText = `You : ${winNum}`
+        loseText.innerText = `Computer : ${loseNum}`
+    }
+    
+</script>
+<style>
+    #play {
+        position: absolute;
+        left: 800px;
+        bottom: 500px;
+    }
+    h1 {
+        position: absolute;
+        left: 700px;
+        bottom: 500px;
+    }
+    .select {
+        position: absolute;
+        left: 700px;
+        bottom: 470px;
+    }
+    .score {
+        position: absolute;
+        left: 700px;
+        bottom: 300px;
+    }
+</style>
+</html>

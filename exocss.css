@@ -1,0 +1,487 @@
+
+body{
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    width: inherit;
+}
+.section {
+    width: 100%;
+    height: 700px;
+    padding: 20px 0px;
+    /* border: black solid 5px; */
+    overflow: hidden;
+}
+.navbar {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    height: 50px;
+    width: 100%;
+    font-size: 30px;
+    font-family: "Lato";
+    align-items: baseline;
+    top: 0px;
+    position:fixed;
+    gap: 30px;
+    color: white;
+    z-index: 10;
+}
+.navbar a {
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.navbar img {
+    height: 60%;
+    width: 2%;
+    filter: invert(100%);
+    position: relative;
+    left: 1000px;
+    top: 10px;
+}
+.navbar img:hover {
+    background-color: rgb(0, 208, 255);
+       
+}
+.navbar a:hover {
+    background-color: white;
+    color: black;
+}
+li {
+    list-style: none;
+    align-items: baseline;
+}
+.image {
+    width:100%;
+    height:100%;
+    z-index: 0;
+    top: 50px;
+}
+.desc {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    font-size: 15px;
+}
+.brians {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.brians img{
+    width: 70%;
+    height: 80%;
+}
+.desctext {
+    width: 60%;
+    display: flex;
+}
+.briname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 220px;
+
+}
+.section {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    font-size: 15px;
+}
+.sold{
+    background-color: red;   
+    display: inline;
+    width: 300px;
+    transform: translateX(50px);
+    z-index:2;
+}
+.three {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    transform: translateX(480px);
+}
+.flextest {
+    background-color: rgb(0, 0, 0);
+}
+.flextest h1,.flextest h2{
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+.flextest h1{
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+.flextest h2{
+    font-style: italic;
+    font-size: 15px;
+    color: gray;
+    font-weight: 100;
+}
+.places {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    gap: 20px;
+    justify-content: center;
+}
+.place1{
+    background-color: aliceblue;
+    width:200px;
+    height: 320px;
+    
+}
+.place2{
+    background-color: aliceblue;
+    width:200px;
+    height: 320px;
+}
+.place3{
+    background-color: aliceblue;
+    width:200px;
+    height: 320px;
+}
+.place1 h4 ,.place2 h4 ,.place3 h4{
+    font-size: 13px;
+    color: gray;
+}
+.place1 h2 ,.place2 h2 ,.place3 h2{
+    font-size: 15px;
+    color: black;
+    font-weight: 100;
+    letter-spacing: 0.2px;
+}
+.buy {
+    position:relative;
+    width: 80px;
+    height: 25px;
+    background-color: black;
+    color: aliceblue;
+}
+.places img{
+    width: 100%;
+    height: 45%;
+}
+.contacticon img {
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    width: 2%;
+    height: 2%;
+    left: 400px;
+    margin-top: 15px;
+}
+.contactinfo{
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    left: 450px;
+    top: -131px;
+    margin: 0px;
+    gap: 2px;
+}
+.inputs {
+    width: 400px;
+    position: relative;
+    right: -900px;
+    top: -250px;
+}
+.inputs input{
+    height: 40px;
+    font-family: "Lato", sans-serif;
+}
+#submit {
+    color: white;
+    background-color: black;
+    width: 70px;
+    position: relative;
+    left: 260px
+    
+}
+#email {
+    width: 153px;
+}
+#message {
+    margin-top: 10px;
+    width: 324px;
+}
+#submit {
+    position:relative;
+    bottom: -40px;
+    right: 60px;
+}
+.socials {
+    width: 100%;
+    height: 300px;
+}
+.icon {
+    height: 20%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    filter: grayscale(100%);
+}
+.socials h2{
+    position:relative;
+    display:flex;
+    margin: auto;
+    color:gray;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-30px);
+    text-decoration: none;   
+}
+.socials h2:visited{
+    color:gray;
+    text-decoration: none;
+}
+.image h1 ,.image h2{
+    z-index: 6;
+    position:relative;
+    top: -190px;
+    color:aliceblue;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: lighter;
+}
+.image h2{
+    font-weight: bold;
+    font-size: 15px;
+}
+.desc h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 10;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+.desc h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    color: gray;
+    font-weight: 10;
+    letter-spacing: 0.1px;
+}
+.desc p {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    display: flex;
+    text-align: justify;
+}
+.whitebox {
+    width: 640px;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.category {
+    display: flex;
+    flex-direction: row;
+}
+.whitebox h3,.whitebox h2 {
+    margin: 0 0 0 0;
+    height: 10px;
+    font-size: 15px;
+    padding: 0 0 0 0;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+.whitebox h2 {
+    padding: 0 0 0 0;
+    background-color: red;
+    height: 20px;
+    width: 60px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 4px;
+    left: 15px;
+}
+.graylineone {
+    width: 640px;
+    background-color: gray;
+    height: 1px;
+    z-index: 3;
+    position:relative;
+    bottom: 90px;
+}
+.graylinetwo{
+    width: 640px;
+    background-color: gray;
+    height: 1px;
+    z-index: 3;
+    position:relative;
+    bottom: 55px;
+}
+.contact h1 {
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.contact h2{
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 15px;
+    color: gray;
+}
+#cont{
+    padding-top: 100px;
+    height: 350px;
+}
+.contactinfo h2{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+}
+#smol {
+    transform: scale(150%);
+}
+.socials h2 a {
+    padding-left: 3px;
+}
+
+@media screen and (max-width: 500px) {
+
+    .hide {
+        display: none;
+    }
+    a[href="#top"] {
+        margin-top: 15px;
+    }
+    .brians {
+        flex-direction: column;
+    }
+    .desctext{
+        width: 95%;
+    }
+    .desc{
+       height: 1400px;
+       padding-top: 0px; 
+       position: relative;
+       align-items: center;
+       
+    }
+    .image{
+        padding-bottom: 0px;
+    }
+    .briname{
+        flex-direction: column;
+    }
+    .brians{
+        margin-top:30px ;
+    }
+    .brians img{
+        margin-bottom: 50px;
+        margin-top: 50px;
+        transform: scale(150%);
+    }
+    .briname {
+        gap: 255px;
+        position: relative;
+        bottom: 900px;
+    }
+    .desc h1,.desc h2,.desctext p{
+        position: relative;
+    
+    }
+    .desc h1 {
+        padding-top: 500px;
+    }
+    .whitebox{
+        width: 400px;
+        margin: auto;
+    }
+    .graylineone,.graylinetwo{
+        width: 400px;
+    }
+    .graylineone{
+        bottom: 70px;
+    }
+    .graylinetwo{
+        bottom: 35px;
+    }
+    .places {
+        flex-direction: column;
+    }
+    .flextest{
+        height: 1900px;
+    }
+    .place1,.place2,.place3{
+        width: 100%;
+        height: 500px;
+    }
+    .places{
+        width: 90%;
+    }
+    .place1 img,.place2 img,.place3 img{
+        height: 60%;
+    }
+    .buy{
+        margin-top: 30px;
+    }
+    .contacticon img{
+        left: 50px;
+        transform: scale(300%);
+        margin-bottom: 20px;
+        z-index: 2;
+    }
+    #smol {
+        transform: scale(500%);
+        z-index: 1;
+    }
+    .contactinfo{
+        left: 100px;
+    }
+    .contactinfo h2{
+        margin-bottom: 0px;
+        position: relative;
+        top: 18px;
+    }
+    .inputs{
+        right: -50px;
+        top: -90px;
+    }
+    .bird{
+        height: 300px;
+    }
+    .bird img{
+        height: 300px;
+    }
+    .socials {
+        height: 100px;
+    }
+    .icons img {
+        transform: scale(200%);
+        margin-bottom: 50px;
+    }
+    .image{
+        margin-top: 15px;
+    }
+    .image h1,.image h2{
+        display: none;
+    }
+}
+body,html {
+    padding: none;
+    margin: 0px 0px 0px 0px;
+}
+

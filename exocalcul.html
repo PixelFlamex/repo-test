@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+                integrity=
+    "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer">
+          </script>
+
+
+            <div class="calculator">
+                <input type="text" id="display"></input>
+        <div class="numberbuttons">
+    <div class="button" onclick="display.value += '1'">
+        <h2>1</h2>
+    </div>
+    <div class="button" onclick="display.value += '2'">
+        <h2>2</h2>
+    </div>
+    <div class="button" onclick="display.value += '3'">
+        <h2>3</h2>
+    </div>
+    <div class="button" onclick="display.value += '4'">
+        <h2>4</h2>
+    </div>
+    <div class="button" onclick="display.value += '5'">
+        <h2>5</h2>
+    </div>
+    <div class="button" onclick="display.value += '6'">
+        <h2>6</h2>
+    </div>
+    <div class="button" onclick="display.value += '7'">
+        <h2>7</h2>
+    </div>
+    <div class="button" onclick="display.value += '8'">
+        <h2>8</h2>
+    </div>
+    <div class="button" onclick="display.value += '9'">
+        <h2>9</h2>
+    </div>
+    <div class="button" onclick="display.value += '0'">
+        <h2>0</h2>
+    </div>
+        </div>
+        <div class="otherbuttons">
+            <div class="button" onclick="display.value += '-'">
+            <h2>-</h2>
+            </div>
+            <div class="button" onclick="display.value += '+'">
+            <h2>+</h2>
+            </div>
+            <div class="button" onclick="display.value += '%'">
+            <h2>%</h2>
+            </div>
+            <div class="button" onclick="display.value += '*'">
+            <h2>*</h2>
+            </div>
+            <div class="button" onclick="display.value += 'sin('">
+            <h2>sin</h2>
+            </div>
+            <div class="button" onclick="display.value += 'cos('">
+            <h2>cos</h2>
+            </div>
+            <div class="button" onclick="display.value += 'tan('">
+            <h2>tan</h2>
+            </div>
+            <div class="button" onclick="display.value += '/'">
+            <h2>/</h2>
+            </div>
+            <div class="button" onclick="display.value += '.'">
+            <h2>.</h2>
+            </div>
+            <div class="button" onclick="display.value += '('">
+            <h2>(</h2>
+            </div>
+            <div class="button" onclick="display.value += ')'">
+            <h2>)</h2>
+            </div>
+            <div class="button" onclick="e()">
+            <h2>e</h2>
+            </div>
+            <div class="button" onclick="pi()">
+            <h2>π</h2>
+            </div>
+            <div class="button" onclick="backspace()">
+            <h2>⌫</h2>
+            </div>
+            <div class="button" onclick="display.value = ''">
+            <h2>C</h2>
+            </div>
+            <div class="button" onclick="calculate()">
+            <h2>=</h2>
+            </div>
+        </div>
+            </div>
+
+
+    <style>
+        *{
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        .button{
+            height: 50px;
+            width: 50px;
+            border: solid gray 2px;
+            cursor: pointer;
+            
+        }
+        .button h2{
+            position:relative;
+            left:18px;
+            top:10px;
+        }
+        .numberbuttons {
+            display: grid;
+            grid-template-columns: 60px 60px 60px;
+            grid-template-rows: 60px 60px 60px;
+            width: 140px;
+            height: 140px;
+        }
+        .otherbuttons {
+            display: grid;
+            grid-template-columns: 60px 60px 60px;
+            grid-template-rows: 60px 60px 60px 60px;
+            width: 240px;
+            height: 240px;
+            position:relative;
+            left: 180px;
+            bottom: 140px;
+        }  
+        #display {
+            width: 1000px;
+            height: 25px;
+        } 
+    </style>
+    <script>
+        
+function backspace() {
+    let display = document.getElementById("display");
+    display.value = display.value.slice(0, -1);
+}
+ 
+function calculate() {
+    let display = document.getElementById("display");
+    let expression = display.value;
+    let result;
+ 
+    try {
+        // Convert trigonometric function inputs from degrees to radians
+        expression = expression.replace(/sin\(/g, 'sin(' + Math.PI / 180 + '*');
+        expression = expression.replace(/cos\(/g, 'cos(' + Math.PI / 180 + '*');
+        expression = expression.replace(/tan\(/g, 'tan(' + Math.PI / 180 + '*');
+ 
+        result = math.evaluate(expression);
+        display.value = result;
+    } catch (error) {
+        display.value = "Error";
+    }
+}
+ 
+function squareRoot() {
+    let display = document.getElementById("display");
+    display.value += "sqrt(";
+}
+ 
+function base10Log() {
+    let display = document.getElementById("display");
+    display.value += "log(";
+}
+ 
+function pi() {
+    let display = document.getElementById("display");
+    display.value += "pi";
+}
+ 
+function e() {
+    let display = document.getElementById("display");
+    display.value += "e";
+}
+ 
+function power() {
+    let display = document.getElementById("display");
+    display.value += "^(";
+}
+
+    </script>
+
+
+
+</body>
+</html>

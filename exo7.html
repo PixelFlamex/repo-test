@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock">
+    <div id="clockbody">
+        <h1 id="hour">1</h1>
+        <h1>:</h1>
+        <h1 id="minute">1</h1>
+        <h1>:</h1>
+        <h1 id="second">1</h1>
+    </div>
+    <div id="clockbox">
+        <input  id= "setTime" min=currentTime type="time" />
+        <button id="set" onclick="setAlarm()">Set</button>
+    </div>
+    <div id="clockscreen"></div>
+    </div>
+    <style>
+        * {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        @font-face {
+        font-family: Digital;
+        src: url(DS-DIGI.TTF);
+        }
+        button {
+            background-color: black;
+            color: greenyellow;
+            font-family: Digital;
+            border: none;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            padding: 2px 2px 2px 2px;
+            cursor: pointer;
+            
+        }
+        #setTime {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            color: greenyellow;
+            font-family: Digital;
+            border: none;
+            padding: 2px 2px 2px 2px;
+        }
+        #clockbox {
+            width: 500px;
+            height: 250px;
+            background-color: gray;
+            border-radius: 20px 20px 0px 0px;
+            border: black outset 4px;
+            position: absolute;
+            bottom: 200px;
+            left: 500px;
+        }
+        #clockscreen{
+            background-color: black;
+            height: 150px;
+            width: 400px;
+            position: relative;
+            left: 555px;
+            top: 210px;
+            border-radius: 20px;
+        }
+        #clockbody {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            
+        }
+        h1 {
+            position: relative;
+            left: 604px;
+            top: 330px;
+            font-family: Digital;
+            font-size: 90px;
+            color: rgb(47, 255, 92);
+            z-index: 3;
+        }
+
+    </style>
+    <script>
+        let alarmTimer = 0
+        let compareDate = 1
+        let currentTime = new Date();
+        console.log(currentTime);
+        let years = currentTime.getFullYear()
+        let months = currentTime.getMonth()
+        console.log(months)
+        let days = currentTime.getDate()
+        console.log(days)
+        let clockColor = document.getElementById("clockscreen")
+        let hours = currentTime.getHours()
+        let minutes = currentTime.getMinutes()
+        let seconds = currentTime.getSeconds()
+        displayHours = document.getElementById("hour");
+        displayMinutes = document.getElementById("minute");
+        displaySeconds = document.getElementById("second");
+        displayHours.innerText = `${hours}`
+        displayMinutes.innerText = `${minutes}`
+        displaySeconds.innerText = `${seconds}`
+        function update() {
+             currentTime = new Date();
+             years = currentTime.getFullYear()
+             months = currentTime.getMonth() + 1
+             days = currentTime.getDate()
+             hours = currentTime.getHours()
+             minutes = currentTime.getMinutes()
+             seconds = currentTime.getSeconds()
+             
+             if (seconds < 10) {
+                displaySeconds.innerText = `0${seconds}`
+             } else {
+                displaySeconds.innerText = `${seconds}`
+             }
+             if (hours < 10) {
+                displayHours.innerText = `0${hours}`
+             } else {
+                displayHours.innerText = `${hours}`
+             }
+             if (minutes < 10) {
+                displayMinutes.innerText = `0${minutes}`
+             } else {
+                displayMinutes.innerText = `${minutes}`
+             }
+             currentAlarm = document.getElementById("setTime")
+             alarmTimer = currentAlarm.value
+             compareDate = `${hours}:${minutes}`
+             if (compareDate == alarmTimer) {
+                console.log("dring")
+                clockColor.style.backgroundColor = "red"
+                setTimeout(normal,3000)
+        }
+            setTimeout(update,1000)
+        }
+        update()
+
+    function setAlarm() {
+        currentAlarm = document.getElementById("setTime")
+        alarmTimer = currentAlarm.value
+        console.log("alarm set");
+        console.log (alarmTimer)
+        
+        if ((months)< 10) {
+        months = `0${months}`
+        }
+        if ((days)< 10) {
+        days = `0${days}`
+        }
+        if ((minutes + 1)< 10) {
+        minutes = `0${minutes}`
+        }
+        if ((hours)< 10) {
+        hours = `0${hours}`
+        }
+        
+        compareDate = `${hours}:${minutes}`
+        console.log(compareDate)
+
+    }
+    function normal() {
+        console.log("drong")
+        clockColor.style.backgroundColor = "black"
+    }
+    </script>
+</body>
+</html>

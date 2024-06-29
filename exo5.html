@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="card">
+        <div id="inputs">
+        <input class="cred" id="code" type="number" pattern="[0-9]{16}" size="16" placeholder="Code" max="9999999999999999" min="1000000000000000"/>
+        <input  name="setTodaysDate" class="cred" id="date" type="date" placeholder="Expiration Date"/>
+        <input class="cred" id="num" type="number" pattern="[0-9]{3}" size="3" placeholder="CVV" max="999" min="000"/>
+        </div>
+    </div>
+    <img class="visa" src="Visa-Logo.png"/>
+    <img class="chip" src="143170815-credit-card-emv-chip-symbol-digital-nfc-payment-technology-microchip-for-banking-card-removebg-preview.png">
+    <div class="mony">
+        <input id="amount" class="cred" type="number" pattern="[0-9]{16}" size="16" placeholder="Amount of $"/>
+        <button value="Gimme my money" onclick="moneycalc()">Gimme my money</button>
+    </div>
+
+    <div id=list class="bills">
+        <h3 id="moneyText"></h3>
+    </div>
+
+    <style>
+        .bills h3 {
+            position:relative;
+            left: 20px;
+            color: aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .bills {
+            position: relative;
+            bottom: 2540px;
+            left: 10px;
+            border: 4px outset mediumseagreen;
+            border-top-color: rgb(150, 255, 197);
+            border-left-color: rgb(167, 255, 207);
+            border-radius: 5px;
+
+        }
+        body {
+            overflow-y: hidden;
+            overflow-x: hidden;
+            background: linear-gradient(0.30turn,mediumaquamarine 30%,rgb(42, 128, 100));
+        }
+        
+        .mony {
+            position: relative;
+            bottom: 2550px;
+            left: 10px;
+        }
+        .mony input {
+            background-color: mediumspringgreen;
+            color: aliceblue;
+            border-radius: 2px;
+        }
+
+    .cred {
+        appearance: textfield;
+        -moz-appearance: textfield;
+        width: 200px;
+        height: 20px;
+    }
+    
+    input:invalid {
+        border: 2px solid red;
+    }
+    input:valid {
+        border: 3px solid green;
+    }
+    #inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    left: 250px;
+    top: 100px;
+    }
+    #inputs input {
+        border-radius: 2px;
+    }
+    #card {
+        background: linear-gradient(0.30turn, mediumspringgreen 65%, white 80%, mediumspringgreen 100%);;
+        border-radius: 10px;
+        width: 500px;
+        height: 300px;
+        border: 4px outset mediumaquamarine;
+        border-top-color: rgb(160, 255, 217);
+        border-left-color: rgb(178, 255, 229);
+    }
+    .visa {
+        transform:scale(5%);
+        position: relative;
+        top: -1340px;
+        left: -1570px;
+        filter: brightness(10000%);
+    }
+    .chip {
+        filter: brightness(100%);
+        transform: scale(30%);
+        position:relative;
+        bottom: 2500px;
+        left: -100px;
+    }
+    .bills {
+        background:linear-gradient(0.3turn,rgb(81, 191, 154)30%,rgb(42, 128, 100));
+        width: 300px;
+        height: 300px;
+    }
+    </style>
+    <script>
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
+        credCode = document.getElementById("code")
+        credNum = document.getElementById("num")
+
+        let currAmount = document.getElementById("amount");
+
+        const billist= document.getElementById("list");
+
+        const billText = document.createElement("h2");
+                billText.innerText = "Got a 100$ bill";
+                billText.className="boul"
+        const bill = document.createElement("div");
+                bill.className="billet"
+
+            let bill100 = 0
+            let bill50 = 0
+            let bill20 = 0
+            let bill10 = 0
+            let bill5 = 0
+            let bill2 = 0
+            let bill1 = 0
+            let billNumber = 0
+
+        const money = document.getElementById("moneyText");
+        function moneycalc() {
+            var numbers = /^[0-9]+$/
+        if(credCode.value.match("1847592756283746") && credNum.value.match("998")) {
+            console.log ("pass")
+        } else {
+            alert('Please enter only Numbers')
+            return
+        }
+        if (credCode.value.length == 16) {
+            console.log ("pass")
+        } else {
+            alert('CVV must contain 16 digits')
+            return
+        }
+        if (credNum.value.length == 3) {
+            console.log ("pass")
+        } else {
+            alert('Code must contain 3 digits')
+            return
+        }
+            money.innerText=""
+            bill100 = 0
+            bill50 = 0
+            bill20 = 0
+            bill10 = 0
+            bill5 = 0
+            bill2 = 0
+            bill1 = 0
+            let amount = parseInt(currAmount.value);
+            console.log (`current amount is ${amount}$`)
+            if(currAmount.value.match(numbers) || amount > 0 || currAmount.value != "") {
+            console.log ("pass")
+        } else {
+            alert('Please enter a valid Amount')
+            return
+        }
+            while (amount != 0) {
+                if (amount >= 100) {
+                    amount -= 100
+                    bill100 ++
+                    continue
+                } else {
+                    if (amount >= 50) {
+                    amount -= 50
+                    bill50 ++
+                    continue
+                } else {
+                    if (amount >= 20) {
+                    amount -= 20
+                    bill20 ++
+                    continue
+                } else {
+                    if (amount >= 10) {
+                    amount -= 10
+                    bill10 ++
+                    continue
+                } else {
+                    if (amount >= 5) {
+                    amount -= 5
+                    bill5 ++
+                    continue
+                } else {
+                    if (amount >= 2) {
+                    amount -= 2
+                    bill2 ++
+                    continue
+                } else {
+                    if (amount >= 1) {
+                    amount -= 1
+                    bill1 ++
+                    continue
+                }
+
+            }
+        }
+    }
+                
+}
+                }
+                }
+            }
+            billNumber = bill100 + bill50 + bill20 + bill5 + bill2 + bill1
+            console.log (bill100," ",bill50," ",bill20," ",bill10," ",bill5," ",bill2," ",bill1)
+            if (billNumber != 0) {
+                if (bill100 > 0) {
+                    money.innerText += `You got ${bill100} bills of 100$ \n`
+                    billNumber -= bill100
+                    bill100 = 0
+                }
+                if (bill50 > 0) {
+                    money.innerText += `You got ${bill50} bills of 50$ \n`
+                    billNumber -= bill50
+                    bill50 = 0
+                }
+                if (bill20 > 0) {
+                    money.innerText += `You got ${bill20} bills of 20$ \n`
+                    billNumber -= bill20
+                    bill20 = 0
+                }
+                if (bill10 > 0) {
+                    money.innerText += `You got ${bill10} bills of 10$ \n`
+                    billNumber -= bill10
+                    bill10 = 0
+                }
+                if (bill5 > 0) {
+                    money.innerText += `You got ${bill5} bills of 5$ \n`
+                    billNumber -= bill5
+                    bill5 = 0
+                }
+                if (bill2 > 0) {
+                    money.innerText += `You got ${bill2} bills of 2$ \n`
+                    billNumber -= bill2
+                    bill2 = 0
+                }
+                if (bill1 > 0) {
+                    money.innerText += `You got ${bill1} bills of 1$ \n`
+                    billNumber -= bill1
+                    bill1 = 0
+                }
+            }
+
+
+        }
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="products">
+        <div id="banana">
+            <img src="banane.jpg"></img>
+            <h1>Banana</h1>
+            <h2>3$</h2>
+            <button id="addBanana" onclick="addB()">Add Item</button>
+        </div>
+        <div id="apple">
+            <img src="green-apply.jpg"></img>
+            <h1>Apple</h1>
+            <h2>2$</h2>
+            <button id="addApple" onclick="addA()">Add Item</button>
+        </div>
+        <div id="grape">
+            <img src="rubyseedlessgrapes.jpg"></img>
+            <h1>Grape</h1>
+            <h2>4$</h2>
+            <button id="addGrape" onclick="addG()">Add Item</button>
+        </div>
+    </div>
+    <div id="cart">
+        <h1 id="total">Total : 0$</h1>
+    </div>
+</body>
+<script>
+    const totalText = document.getElementById("total");
+    const shop = document.getElementById("cart");
+    let totalAmount = 0;
+
+    let isAddedB = 0;
+    let isAddedA = 0;
+    let isAddedG = 0;
+    let bananaPrice = 0;
+    let applePrice = 0;
+    let grapePrice = 0;
+
+    function removerB(element) {
+        element.remove()
+        isAddedB= 0
+        bananaPrice=0
+        costB = bananaPrice * 3;
+    costA = applePrice * 2;
+    costG = grapePrice * 4;
+    totalAmount = costB + costA + costG;
+    totalText.innerText = `Total : ${totalAmount}$`;
+    }
+    function removerA(element) {
+        element.remove()
+        isAddedA= 0
+        applePrice=0
+        costB = bananaPrice * 3;
+    costA = applePrice * 2;
+    costG = grapePrice * 4;
+    totalAmount = costB + costA + costG;
+    totalText.innerText = `Total : ${totalAmount}$`;
+    }
+    function removerG(element) {
+        element.remove()
+        isAddedG= 0
+        grapePrice=0
+        costB = bananaPrice * 3;
+    costA = applePrice * 2;
+    costG = grapePrice * 4;
+    totalAmount = costB + costA + costG;
+    totalText.innerText = `Total : ${totalAmount}$`;
+    }
+    function addB() {
+        if (isAddedB==1){
+            return
+        }
+        const childB = document.createElement("div");
+        childB.id = "FruitB";
+        childB.className = "froot";
+        const itemB = document.createElement("h3");
+        itemB.innerText="Banana"
+        const amountB = document.createElement("input");
+        amountB.value = "1";
+        amountB.setAttribute("onchange","refreshB()");
+        amountB.min = "1";
+        amountB.id = "PriceB"
+        amountB.type = "Number";
+        amountB.placeholder = "Amount";
+        const removeB = document.createElement("button");
+        removeB.innerText="Remove";
+        removeB.setAttribute("onclick","removerB(this.parentElement)");
+        childB.appendChild(itemB);
+        childB.appendChild(amountB);
+        childB.appendChild(removeB);
+        shop.appendChild(childB);
+        isAddedB = 1
+        refreshB()
+    }
+
+    function addA() {
+        if (isAddedA==1){
+            return
+        }
+        const childA = document.createElement("div");
+        childA.id = "FruitA";
+        childA.className = "froot";
+        const itemA = document.createElement("h3");
+        itemA.innerText="Apple"
+        const amountA = document.createElement("input");
+        amountA.setAttribute("onchange","refreshA()");
+        amountA.value = "1";
+        amountA.min = "1";
+        amountA.id = "PriceA"
+        amountA.type = "Number";
+        amountA.placeholder = "Amount";
+        const removeA = document.createElement("button");
+        removeA.innerText="Remove";
+        removeA.setAttribute("onclick","removerA(this.parentElement)");
+        childA.appendChild(itemA);
+        childA.appendChild(amountA);
+        childA.appendChild(removeA);
+        shop.appendChild(childA);
+        isAddedA = 1
+        refreshA()
+    }
+
+    function addG() {
+        if (isAddedG==1){
+            return
+        }
+        const childG = document.createElement("div");
+        childG.id = "FruitG";
+        childG.className = "froot";
+        const itemG = document.createElement("h3");
+        itemG.innerText="Grape"
+        const amountG = document.createElement("input");
+        amountG.setAttribute("onchange","refreshG()");
+        amountG.value = "1";
+        amountG.min = "1";
+        amountG.id = "PriceG"
+        amountG.type = "Number";
+        amountG.placeholder = "Amount";
+        const removeG = document.createElement("button");
+        removeG.innerText="Remove";
+        removeG.setAttribute("onclick","removerG(this.parentElement)");
+        childG.appendChild(itemG);
+        childG.appendChild(amountG);
+        childG.appendChild(removeG);
+        shop.appendChild(childG);
+        isAddedG = 1 
+        refreshG()
+    }
+    function refreshB() {
+        bananaPrice = document.getElementById("PriceB").value;
+    costB = bananaPrice * 3;
+    costA = applePrice * 2;
+    costG = grapePrice * 4;
+    totalAmount = costB + costA + costG;
+    totalText.innerText = `Total : ${totalAmount}$`;
+    }
+    function refreshA() {
+        applePrice = document.getElementById("PriceA").value;
+    costB = bananaPrice * 3;
+    costA = applePrice * 2;
+    costG = grapePrice * 4;
+    totalAmount = costB + costA + costG;
+    totalText.innerText = `Total : ${totalAmount}$`;
+    }
+    function refreshG() {
+        grapePrice = document.getElementById("PriceG").value;
+    costB = bananaPrice * 3;
+    costA = applePrice * 2;
+    costG = grapePrice * 4;
+    totalAmount = costB + costA + costG;
+    totalText.innerText = `Total : ${totalAmount}$`;
+    }
+
+</script>
+<style>
+#products div img {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+#products {
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap : 100px;
+}
+#products div {
+    border: rgb(81, 81, 81) solid 5px;
+    padding-bottom: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(195, 195, 195) 5px 5px 5px 5px;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 50px;
+}
+#products div button {
+    position: relative;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+}
+#products h1,h2 {
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#cart {
+    border: rgb(81, 81, 81) solid 5px;
+    border-radius: 10px;
+    box-shadow: rgb(195, 195, 195) 5px 5px 5px 5px;
+    margin: 0 auto;
+    width: 50%;
+    height: 350px;
+}
+.froot {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+.froot h3 {
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    margin-left: 30px;
+    margin-right: 20px
+}
+.froot input {
+    width: 40%;
+    margin-left: 100px;
+}
+.froot button {
+    position: relative;
+    left: 80px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#fruitG {
+    left: 200px;
+}
+</style>
+</html>

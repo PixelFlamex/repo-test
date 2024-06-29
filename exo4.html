@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="title">
+        <h1>To-Do List Generator</h1>
+    </div>
+    <div id="addbar">
+        <input id="namebar" type="text" placeholder="Name" value="1"/><input id="add" type="button" value="Add" />
+    </div>
+
+
+    <div id="lister">
+
+
+    </div>
+
+
+    <style>
+
+
+        #add {
+            background-color: burlywood;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            margin-left: 5px;
+        }
+        #title {
+            margin: 0 auto;
+            width: 30%;
+            height: 80px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            background-color: rgb(254, 216, 165);
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+            border: outset rgb(213, 163, 98) 1px;
+        }
+        #title h1 {
+            margin-bottom: 20px;
+            color: burlywood;
+        }
+        body {
+            background-color: rgb(255, 196, 119);
+            overflow-x: hidden;
+        }
+        body h1 {
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+            left: 30px;
+            top: 5px;
+        }
+        #addbar {
+            position: relative;
+            left: 525px;
+            
+        }
+        #namebar {
+            width: 27.3%;
+            background-color: burlywood;
+            border: solid white 1 px;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 20px;
+        }
+        #lister {
+            background-color: antiquewhite;
+            height:500px;
+            width: 30%;
+            margin: 0 auto;
+            overflow-y: scroll;
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+            border: outset rgb(213, 163, 98) 5px;
+        }
+        .delete {
+            height: 20px;
+            width: 58px;
+            background-color: burlywood;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .check{
+            height: 20px;
+            width: 20px;
+        }
+        .editer {
+            height: 20px;
+            background-color: burlywood;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .tasks {
+            font-family: 'Courier New', Courier, monospace;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            padding-top: 25px;
+            border: goldenrod 2px solid;
+            background-color: burlywood;
+        }
+        .tasks button {
+            margin-left: 20px;
+        }
+        .tasks h3 {
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+            bottom: 18px;
+        }
+    </style>
+
+    <script>
+        const list = document.getElementById("lister");
+        let name = document.getElementById("namebar");
+        const adder = document.getElementById("add");
+
+        
+        function deleteMe(element) {
+            element.remove();
+        }
+
+        function addTask() {
+            // name = document.getElementById("namebar").value;
+            const child = document.createElement("div");
+            child.className = "tasks";
+            list.appendChild(child);
+            const texter = document.createElement("h3");
+            texter.innerText = `${name.value}`
+            child.appendChild(texter);
+            const edit = document.createElement("button");
+            edit.innerText = "Edit"
+            edit.setAttribute("onclick", "changer(this.previousElementSibling)");
+            edit.className ="editer"
+            child.appendChild(edit);
+            const delet = document.createElement("button");
+            delet.innerText = "Delete";
+            delet.className = "delete";
+            delet.setAttribute("value","Delete");
+            delet.setAttribute("onclick", "deleteMe(this.parentElement)");
+            child.appendChild(delet);
+            const butt = document.createElement("button");         
+            butt.name = "Check";
+            butt.id = "box";
+            butt.className = "check";
+            butt.setAttribute("onclick", "color(this)");
+            child.appendChild(butt);
+            name.value = "";
+            console.log("complete");
+        }
+        let isclicked=0;
+        adder.addEventListener("click",addTask);
+
+        function color(item) {
+            const itemer = item;
+            if (isclicked==0) {
+            itemer.style.backgroundColor = "green";
+            isclicked = 1;
+            }else {
+            itemer.style.backgroundColor = "red";
+            isclicked = 0;
+            }
+        }
+        var inputer = document.createElement("input")
+        var namer = document.createElement("h3")
+        let clicky = 0
+        function changer(item1) {
+            if (clicky==0) {
+            inputer.value = item1.innerText;
+            console.log ("edited");
+            item1.replaceWith(inputer);
+            clicky = 1;
+            } else {
+                namer.innerText = inputer.value;
+                item1.replaceWith(namer);
+                clicky = 0
+            }
+        }
+    
+    </script>
+</body>
+</html>

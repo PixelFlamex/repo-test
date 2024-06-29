@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.para{
+width: 500px;
+height: 500px;
+font-size: 20px;
+font-style: italic;
+}
+.image{
+ height: 20%;
+ width: 20%;
+}
+.ti {
+    text-align: center;
+    font-size: 50px;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.para1 {
+    display:flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width:50px;
+    font-size: 20px;
+    padding-left:200px;
+    margin-bottom: 20px;
+}
+.para2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    padding-right: 75px;
+}
+.fri {
+    display: flex;
+    width: 200px;
+}

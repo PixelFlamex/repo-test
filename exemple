@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="divId">
+            <h2>This is my div</h2>
+        </div>
+        <button onclick="addElem()">click</button>
+    </body>
+    <script>
+        const parentDiv = document.getElementById("divId");
+        let divContent = 0;
+        function addElem() {
+            const childDiv = document.createElement("div");
+            childDiv.innerText = this div is ${divContent};
+            childDiv.id = child${divContent};
+            childDiv.className = "ffdfdf ";
+            childDiv.setAttribute("onclick", "deleteMe(this)");
+            divContent += 1;
+            // add the created HTML element into the parent
+            parentDiv.appendChild(childDiv);
+        }
+        Math.random()
+
+        function deleteMe(element) {
+            element.remove();
+        }
+    </script>
+</html>

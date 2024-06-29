@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">click me</button>
+    <div id="click">text test</div>
+</body>
+<script>
+    var isClicked=  0 ;
+    const button = document.getElementById("button")
+    button.addEventListener("click",color);
+    const box = document.getElementById("click")
+    function color() {
+        if (isClicked == 0 ) {
+        box.style.backgroundColor = "red";
+        box.style.color = "blue";
+        isClicked=  1 ;
+        } else {
+        box.style.backgroundColor = "white";
+        box.style.color = "black";
+        isClicked=  0 ;
+        }
+        
+    }
+
+
+</script>
+</html>

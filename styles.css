@@ -1,0 +1,64 @@
+#test {
+
+}
+body {
+    background-color: black;
+}
+* {
+    color: aliceblue;
+    font-family: "Comic Sans MS", "Comic Sans";
+    font-size: 30px;
+    ;
+}
+.round {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin:auto;
+    border-radius: 200px;
+    border:  gray 5px;
+    border-style:solid;
+    filter: blur(2px)
+    
+}
+#gray {
+    color:gray
+}
+.fp {
+    border: solid white 2px;
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+img {
+    padding: 5px;
+}
+@keyframes dance {
+    0%{
+        filter:blur(0px) 
+    }
+      50% {
+        
+        transform:translate(1300px) rotate(360deg) scale(50%);
+        
+      }
+      25%{
+        filter:blur(3px);
+      }
+      50%{
+        filter:blur(0px);
+      }
+      75%{
+        filter:blur(3px);
+      }
+      100% {
+        transform: translate(-2.8px) rotate(-360deg) scale(100%);
+        filter:blur(0px);
+      }
+}
+.dnce {
+    animation: dance 5s ease-in-out infinite;
+}
+.bold {
+    font-weight: bold;
+}
