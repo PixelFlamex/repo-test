@@ -1,0 +1,62 @@
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+button {
+  background-color: black;
+  color: greenyellow;
+  font-family: Exo 2;
+  border: none;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  padding: 2px 2px 2px 2px;
+  cursor: pointer;
+  
+}
+#setTime {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: greenyellow;
+  font-family: Digital;
+  border: none;
+  padding: 2px 2px 2px 2px;
+}
+#clockbox {
+  width: 500px;
+  height: 250px;
+  background-color: gray;
+  border-radius: 20px 20px 0px 0px;
+  border: black outset 4px;
+  position: absolute;
+  left: 34%;
+  bottom: 35%;
+
+}
+#clockscreen{
+  background-color: black;
+  height: 150px;
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+#clockbody {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  
+}
+h1 {
+  margin-left: 55px;
+  padding-top: 40px;
+  font-family: Exo 2;
+  font-size: 90px;
+  color: rgb(47, 255, 92);
+  z-index: 3;
+}
