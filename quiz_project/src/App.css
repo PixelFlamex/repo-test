@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.question {
+  border: none;
+ }
+
+div {
+  border: solid white 2px;
+  width: 400px;
+  height: 100px;
+}
+h1 {
+  width: fit-content;
+  height: fit-content;
+  font-size: 10px;
+  
+}
