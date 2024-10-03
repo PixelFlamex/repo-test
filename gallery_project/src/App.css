@@ -1,0 +1,30 @@
+#root {
+  max-width: 1280px;
+  
+  padding: 2rem;
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  height: 700px;
+  gap: 20px;
+}
