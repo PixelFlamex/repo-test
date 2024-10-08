@@ -1,0 +1,25 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.prodsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  width: 75%;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.cart {
+  width: 25%;
+}
+.secCont {
+  display: flex;
+  width: 100%;
+}
