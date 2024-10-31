@@ -1,0 +1,348 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(#2a86d6, rgb(10, 5, 152)); 
+}
+.m-plus-1p-regular {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mainWindow {
+    width: 1000px;
+    height: 450px;
+    border-radius: 10px;
+    position: absolute;
+    top: 180px;
+    left: 265px;
+    background: linear-gradient(160deg,aliceblue, rgb(145, 204, 255)); 
+    padding: 10px; 
+}
+
+.profilePicOwned {
+    height: 100px;
+    width: 100px;
+    border: black 2px solid;
+    border-radius: 500px;
+}
+
+.profilePic {
+    height: 100px;
+    width: 100px;
+    border: black 2px solid;
+    border-radius: 500px;
+}
+
+.profilePicNotOwned {
+    height: 100px;
+    width: 100px;
+    border: rgb(255, 0, 0) 2px solid;
+    border-radius: 500px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    position: absolute;
+    left:55px;
+    top: 100px;
+    
+}
+.schoolButton {
+    width: 250px;
+    height: 250px;
+    border-radius: 500px;
+    border: black 2px solid;
+    background: linear-gradient(160deg,rgb(252, 254, 255)40%, rgb(145, 204, 255),rgb(145, 204, 255)90%);
+    font-family: "M PLUS 1p", sans-serif;
+    font-size: 50px;
+    color: rgb(93, 179, 255)
+}
+.schoolButton:hover {
+    cursor: pointer;
+}
+.title {
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    position: absolute;
+    left:540px;
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.profileBox {
+    margin-top: 15px;
+    height: 360px;
+    width: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.previewIcon {
+    height: 200px;
+    width: 200px;
+    border: black 2px solid;
+    border-radius: 500px;
+    position: absolute;
+    left: 860px;
+    top:200px
+}
+
+h1 {
+    font-family: "M PLUS 1p", sans-serif;
+    font-style: normal;
+    background: linear-gradient(160deg,rgb(141, 156, 255)10%, rgb(92, 178, 253)20%,rgb(86, 193, 247)90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.stats {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: #ffffff;
+}
+.stat {
+    padding: 5px;
+    width: 400px;
+    background: linear-gradient(160deg,rgb(141, 217, 255)40%, rgb(199, 229, 255)80%,rgb(150, 206, 255)90%);
+    border-radius: 10px;
+}
+.backButton {
+    background-color: rgb(136, 199, 255);
+    color: #ffffff;
+    font-family: "M PLUS 1p", sans-serif;
+    border: 2px;
+    position: absolute;
+    top: 410px;
+    border-color: rgb(22, 146, 255);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+}
+.backButton:hover {
+    background-color: rgb(99, 182, 255);
+    cursor: pointer;
+}
+.fa{ 
+    height: 200px;
+    width:200px
+}
+.price {
+    position: absolute;
+    top: 420px;
+    left: 862px;
+    width: 200px;
+    text-align: center;
+    
+}
+
+.changeButton {
+    background-color: rgb(136, 199, 255);
+    color: #ffffff;
+    font-family: "M PLUS 1p", sans-serif;
+    border: 2px;
+    position: absolute;
+    top: 310px;
+    left: 643px;
+    border-color: rgb(22, 146, 255);
+    border-radius: 5px;
+    width: 110px;
+    height: 80px;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+}
+.changeButton:hover {
+    background-color: rgb(99, 182, 255);
+    cursor: pointer;
+}
+.username {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.playButton {
+    background-color: rgb(136, 199, 255);
+    color: #ffffff;
+    font-family: "M PLUS 1p", sans-serif;
+    border: 2px;
+    position: absolute;
+    top: 210px;
+    border-color: rgb(22, 146, 255);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+}
+.playButton:hover {
+    background-color: rgb(99, 182, 255);
+    cursor: pointer;
+}
+.endText {
+    margin-bottom: 20px;
+    width: 200px;
+    position: absolute;
+    right: 300px
+}
+.endText1 {
+    margin-bottom: 20px;
+    width: 200px;
+    position: absolute;
+    right: 300px;
+    top: 100px
+}
+.timerBubble {
+    height: 80px;
+    width: 80px;
+    border-radius: 300px;
+    background: linear-gradient(160deg,rgb(47, 186, 255)10%,rgb(141, 217, 255)40%, rgb(199, 229, 255)70%,rgb(150, 206, 255)90%);
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    left: 440px
+}
+.inputs {
+    position: absolute;
+    top: 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+.inputs input {
+    background-color: rgb(136, 199, 255);
+    color: #ffffff;
+    font-family: "M PLUS 1p", sans-serif;
+    border: 2px;
+    width:30px;
+    text-align: center;
+    -moz-appearance: textfield;
+    border-color: rgb(22, 146, 255);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.miniProfile {
+    position: absolute;
+    width: 250px;
+    background-color: #1c5b93;
+    z-index: 2;
+}
+.miniPic {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 100px;
+    width: 100px;
+    border: black 2px solid;
+    border-radius: 500px;
+}
+
+.pointAmount {
+    font-family: "M PLUS 1p", sans-serif;
+    font-style: normal;
+    background: linear-gradient(160deg,rgb(141, 156, 255)10%, rgb(92, 178, 253)20%,rgb(86, 193, 247)90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top:415px;
+    left: 100px;
+}
+
+.disconnect {
+    background-color: rgb(136, 199, 255);
+    color: #ffffff;
+    font-family: "M PLUS 1p", sans-serif;
+    border: 2px;
+    position: absolute;
+    top: 410px;
+    border-color: rgb(22, 146, 255);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+}
+.disconnect:hover {
+    background-color: rgb(99, 182, 255);
+    cursor: pointer;
+}
+
+.mainWindowLogin {
+    width: 600px;
+    height: 450px;
+    border-radius: 10px;
+    position: absolute;
+    top: 180px;
+    left: 465px;
+    background: linear-gradient(160deg,aliceblue, rgb(145, 204, 255)); 
+    padding: 10px; 
+}
+
+.loginInputs input {
+    background-color: rgb(159, 210, 255);
+    color: #ffffff;
+    font-family: "M PLUS 1p", sans-serif;
+    border: 2px;
+    width:100px;
+    text-align: center;
+    -moz-appearance: textfield;
+    border-color: rgb(22, 146, 255);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.loginInputs button {
+    background-color: rgb(136, 199, 255);
+    color: #ffffff;
+    font-family: "M PLUS 1p", sans-serif;
+    border: 2px;
+    margin-left: 25px;
+    border-color: rgb(22, 146, 255);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+}
+.loginInputs button:hover {
+    background-color: rgb(99, 182, 255);
+    cursor: pointer;
+}
+
+.loginBackButton {
+    background-color: rgb(136, 199, 255);
+    color: #ffffff;
+    font-family: "M PLUS 1p", sans-serif;
+    border: 2px;
+    position: absolute;
+    top: 410px;
+    border-color: rgb(22, 146, 255);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    
+}
+.loginBackButton:hover {
+    background-color: rgb(99, 182, 255);
+    cursor: pointer;
+}
+
+.loginInputs h2 {
+    font-family: "M PLUS 1p", sans-serif;
+    color: #2a86d6;
+}
